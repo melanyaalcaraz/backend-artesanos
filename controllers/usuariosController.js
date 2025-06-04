@@ -71,7 +71,36 @@ const loginUsuario = async (req, res) => {
 };
 
 
+const conexion = require('../base_datos/conexion');
+
+const buscarUsuarios = (req, res) => {
+  const { q } = req.query;
+  const usuarioActualId = req.usuario.id;
+
+  const sql = `
+    SELECT id, nombre, email FROM usuarios
+    WHERE (nombre LIKE ? OR email LIKE ?)
+      AND id != ?
+  `;
+
+  const valor = `%${q}%`;
+
+  conexion.query(sql, [valor, valor, usuarioActualId], (err, resultados) => {
+    if (err) {
+      console.error('❌ Error al buscar usuarios:', err);
+      return res.status(500).json({ error: 'Error al buscar usuarios' });
+    }
+
+    res.json(resultados);
+  });
+};
+
+
+
+
+
 module.exports = {
   registrarUsuario,
-  loginUsuario
+  loginUsuario,
+  buscarUsuarios
 };
