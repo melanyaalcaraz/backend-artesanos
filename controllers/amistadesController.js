@@ -19,13 +19,6 @@ const solicitarAmistad = (req, res) => {
   });
 };
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-module.exports = { solicitarAmistad };
-=======
-=======
->>>>>>> Stashed changes
-<<<<<<< HEAD
 
 const solicitudesPendientes = (req, res) => {
   const usuarioId = req.usuario.id;
@@ -76,11 +69,4 @@ module.exports = {
 
 
 
-=======
-module.exports = { solicitarAmistad };
->>>>>>> 5f848d0549014022dd65926cf6a28111a8d2e759
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
