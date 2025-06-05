@@ -1,4 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 <<<<<<< HEAD
 =======
@@ -14,6 +19,10 @@
 //   crearSolicitud
 // };
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> 5f848d0549014022dd65926cf6a28111a8d2e759
+>>>>>>> Stashed changes
 =======
 >>>>>>> 5f848d0549014022dd65926cf6a28111a8d2e759
 >>>>>>> Stashed changes
@@ -28,9 +37,12 @@ function crearSolicitud(deId, paraId, callback) {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 module.exports = {
   crearSolicitud
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 
 function obtenerSolicitudesPendientes(usuarioId, callback) {
@@ -78,6 +90,9 @@ module.exports = {
 module.exports = {
   crearSolicitud
 >>>>>>> 5f848d0549014022dd65926cf6a28111a8d2e759
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 };
 
