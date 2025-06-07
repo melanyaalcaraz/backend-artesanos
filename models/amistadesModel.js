@@ -46,8 +46,11 @@ function rechazarSolicitud(id, callback) {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -66,8 +69,11 @@ function verificarRelacionExistente(id1, id2, callback) {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -82,6 +88,7 @@ module.exports = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   rechazarSolicitud
 =======
 <<<<<<< HEAD
@@ -90,6 +97,10 @@ module.exports = {
 =======
   rechazarSolicitud
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
+  rechazarSolicitud,
+  verificarRelacionExistente
 >>>>>>> Stashed changes
 =======
   rechazarSolicitud,

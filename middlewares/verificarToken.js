@@ -21,11 +21,15 @@ function verificarToken(req, res, next) {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 =======
 
