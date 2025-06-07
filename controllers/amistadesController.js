@@ -1,11 +1,70 @@
 
 const amistadesModel = require('../models/amistadesModel');
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+// const solicitarAmistad = (req, res) => {
+//   const deUsuarioId = req.usuario.id;
+//   const { para_usuario_id } = req.body;
+
+//   if (!para_usuario_id) {
+//     return res.status(400).json({ error: 'Faltan datos' });
+//   }
+
+//   amistadesModel.crearSolicitud(deUsuarioId, para_usuario_id, (err, resultado) => {
+//     if (err) {
+//       console.error('❌ Error al enviar solicitud:', err);
+//       return res.status(500).json({ error: 'Error al enviar solicitud' });
+//     }
+
+//     res.status(201).json({ mensaje: 'Solicitud enviada', id: resultado.insertId });
+//   });
+// };
+
+=======
+>>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
 const solicitarAmistad = (req, res) => {
   const deUsuarioId = req.usuario.id;
   const { para_usuario_id } = req.body;
 
   if (!para_usuario_id) {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    return res.status(400).json({ error: 'Faltan datos: para_usuario_id es obligatorio' });
+  }
+
+  if (deUsuarioId === para_usuario_id) {
+    return res.status(400).json({ error: 'No podés enviarte solicitud a vos misma' });
+  }
+
+  amistadesModel.verificarRelacionExistente(deUsuarioId, para_usuario_id, (err, resultados) => {
+    if (err) {
+      console.error('❌ Error al verificar relación:', err);
+      return res.status(500).json({ error: 'Error al verificar relación' });
+    }
+
+    if (resultados.length > 0) {
+      const estado = resultados[0].estado;
+      if (estado === 'pendiente') {
+        return res.status(400).json({ error: 'Ya enviaste una solicitud a esta persona' });
+      } else if (estado === 'aceptada') {
+        return res.status(400).json({ error: 'Ya sos amigo de esta persona' });
+      }
+    }
+
+    amistadesModel.crearSolicitud(deUsuarioId, para_usuario_id, (err, resultado) => {
+      if (err) {
+        console.error('❌ Error al enviar solicitud:', err);
+        return res.status(500).json({ error: 'Error al enviar solicitud' });
+      }
+
+      res.status(201).json({ mensaje: 'Solicitud enviada', id: resultado.insertId });
+    });
+=======
+>>>>>>> Stashed changes
     return res.status(400).json({ error: 'Faltan datos' });
   }
 
@@ -16,6 +75,10 @@ const solicitarAmistad = (req, res) => {
     }
 
     res.status(201).json({ mensaje: 'Solicitud enviada', id: resultado.insertId });
+<<<<<<< Updated upstream
+=======
+>>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
   });
 };
 
@@ -59,6 +122,14 @@ const rechazarSolicitud = (req, res) => {
   });
 };
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
 module.exports = {
   solicitudesPendientes,
   solicitarAmistad,

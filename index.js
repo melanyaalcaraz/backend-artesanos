@@ -1,6 +1,8 @@
   const express = require('express');
   const cors = require('cors');
   const app = express();
+  const path = require('path');
+
   
   app.use(cors());
   app.use(express.json());
@@ -17,7 +19,18 @@
   const usuariosRoutes = require('./routes/usuarios');
 app.use('/api/usuarios', usuariosRoutes);
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+const imagenesRoutes = require('./routes/imagenes');
+app.use('/api/imagenes', imagenesRoutes);
+=======
+>>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
   
+
   // Iniciar servidor
   app.listen(puerto, () => {
     console.log(`🚀 Servidor corriendo en http://localhost:${puerto}`);

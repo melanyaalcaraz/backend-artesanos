@@ -43,12 +43,39 @@ function rechazarSolicitud(id, callback) {
   conexion.query(sql, [id], callback);
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+function verificarRelacionExistente(id1, id2, callback) {
+  const sql = `
+    SELECT * FROM amistades
+    WHERE 
+      (de_usuario_id = ? AND para_usuario_id = ?)
+      OR
+      (de_usuario_id = ? AND para_usuario_id = ?)
+  `;
+  conexion.query(sql, [id1, id2, id2, id1], callback);
+}
+
+
+=======
+>>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
 
 module.exports = {
   crearSolicitud,
   solicitudesPendientes,
   obtenerSolicitudesPendientes,
   aceptarSolicitud,
+<<<<<<< Updated upstream
   rechazarSolicitud
+=======
+<<<<<<< HEAD
+  rechazarSolicitud,
+  verificarRelacionExistente
+=======
+  rechazarSolicitud
+>>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
 };
 
