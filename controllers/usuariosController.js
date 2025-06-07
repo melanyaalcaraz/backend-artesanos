@@ -77,8 +77,11 @@ const conexion = require('../base_datos/conexion');
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 // const buscarUsuarios = (req, res) => {
@@ -119,6 +122,7 @@ const buscarUsuarios = (req, res) => {
     WHERE (u.nombre LIKE ? OR u.email LIKE ?)
       AND u.id != ?
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> Stashed changes
 const buscarUsuarios = (req, res) => {
@@ -135,10 +139,13 @@ const buscarUsuarios = (req, res) => {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   `;
 
   const valor = `%${q}%`;
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   conexion.query(sql, [valor, valor, usuarioActualId], (err, resultados) => {
@@ -148,6 +155,9 @@ const buscarUsuarios = (req, res) => {
 =======
   conexion.query(sql, [valor, valor, usuarioActualId], (err, resultados) => {
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
+  conexion.query(sql, [usuarioId, usuarioId, valor, valor, usuarioId], (err, resultados) => {
 >>>>>>> Stashed changes
 =======
   conexion.query(sql, [usuarioId, usuarioId, valor, valor, usuarioId], (err, resultados) => {
@@ -166,12 +176,15 @@ const buscarUsuarios = (req, res) => {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

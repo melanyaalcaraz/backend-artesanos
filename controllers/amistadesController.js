@@ -3,8 +3,11 @@ const amistadesModel = require('../models/amistadesModel');
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 // const solicitarAmistad = (req, res) => {
@@ -26,8 +29,11 @@ const amistadesModel = require('../models/amistadesModel');
 // };
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -38,8 +44,11 @@ const solicitarAmistad = (req, res) => {
   if (!para_usuario_id) {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     return res.status(400).json({ error: 'Faltan datos: para_usuario_id es obligatorio' });
@@ -73,6 +82,7 @@ const solicitarAmistad = (req, res) => {
       res.status(201).json({ mensaje: 'Solicitud enviada', id: resultado.insertId });
     });
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> Stashed changes
     return res.status(400).json({ error: 'Faltan datos' });
@@ -88,6 +98,8 @@ const solicitarAmistad = (req, res) => {
 <<<<<<< Updated upstream
 =======
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -136,12 +148,17 @@ const rechazarSolicitud = (req, res) => {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
+
+
 >>>>>>> Stashed changes
 =======
 
