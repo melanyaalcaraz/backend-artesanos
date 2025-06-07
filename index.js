@@ -20,14 +20,20 @@
 app.use('/api/usuarios', usuariosRoutes);
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 const imagenesRoutes = require('./routes/imagenes');
 app.use('/api/imagenes', imagenesRoutes);
+<<<<<<< Updated upstream
 =======
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   
 

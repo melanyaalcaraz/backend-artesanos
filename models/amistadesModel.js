@@ -44,8 +44,11 @@ function rechazarSolicitud(id, callback) {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 function verificarRelacionExistente(id1, id2, callback) {
   const sql = `
     SELECT * FROM amistades
@@ -58,8 +61,11 @@ function verificarRelacionExistente(id1, id2, callback) {
 }
 
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 module.exports = {
@@ -67,6 +73,7 @@ module.exports = {
   solicitudesPendientes,
   obtenerSolicitudesPendientes,
   aceptarSolicitud,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   rechazarSolicitud
 =======
@@ -76,6 +83,10 @@ module.exports = {
 =======
   rechazarSolicitud
 >>>>>>> 3b4ec40570cce82e3185e150a561d9489812b0bb
+>>>>>>> Stashed changes
+=======
+  rechazarSolicitud,
+  verificarRelacionExistente
 >>>>>>> Stashed changes
 };
 
