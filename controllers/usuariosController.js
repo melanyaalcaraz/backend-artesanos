@@ -8,6 +8,8 @@ const registrarUsuario = async (req, res) => {
     return res.status(400).json({ error: 'Faltan datos obligatorios' });
   }
 
+
+
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const usuario = {
@@ -25,12 +27,12 @@ const registrarUsuario = async (req, res) => {
       }
       return res.status(500).json({ error: 'Error interno del servidor' });
     }
-   
-      res.status(201).json({
-    mensaje: 'Usuario registrado correctamente!',
-    id: resultado.insertId
+
+    res.status(201).json({
+      mensaje: 'Usuario registrado correctamente!',
+      id: resultado.insertId
+    });
   });
-  });  
 
 
 };
@@ -71,7 +73,64 @@ const loginUsuario = async (req, res) => {
 };
 
 
+const conexion = require('../base_datos/conexion');
+
+// const buscarUsuarios = (req, res) => {
+//   const { q } = req.query;
+//   const usuarioActualId = req.usuario.id;
+
+//   const sql = `
+//     SELECT id, nombre, email FROM usuarios
+//     WHERE (nombre LIKE ? OR email LIKE ?)
+//       AND id != ?
+//   `;
+
+//   const valor = `%${q}%`;
+
+//   conexion.query(sql, [valor, valor, usuarioActualId], (err, resultados) => {
+//     if (err) {
+//       console.error('❌ Error al buscar usuarios:', err);
+//       return res.status(500).json({ error: 'Error al buscar usuarios' });
+//     }
+
+//     res.json(resultados);
+//   });
+// };
+
+
+
+const buscarUsuarios = (req, res) => {
+  const { q } = req.query;
+  const usuarioId = req.usuario.id;
+
+  const sql = `
+    SELECT u.id, u.nombre, u.email,
+      (SELECT estado FROM amistades
+       WHERE (de_usuario_id = ? AND para_usuario_id = u.id)
+          OR (de_usuario_id = u.id AND para_usuario_id = ?)
+       LIMIT 1) AS estado_amistad
+    FROM usuarios u
+    WHERE (u.nombre LIKE ? OR u.email LIKE ?)
+      AND u.id != ?
+  `;
+
+  const valor = `%${q}%`;
+
+  conexion.query(sql, [usuarioId, usuarioId, valor, valor, usuarioId], (err, resultados) => {
+    if (err) {
+      console.error('❌ Error al buscar usuarios:', err);
+      return res.status(500).json({ error: 'Error al buscar usuarios' });
+    }
+
+    res.json(resultados);
+  });
+};
+
+
+
+
 module.exports = {
   registrarUsuario,
-  loginUsuario
+  loginUsuario,
+  buscarUsuarios
 };
