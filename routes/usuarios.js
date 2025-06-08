@@ -1,5 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const { buscarUsuarios } = require('../controllers/usuariosController');
+const verificarToken = require('../middlewares/verificarToken');
+
+// Ruta para buscar usuarios por nombre o email
+router.get('/buscar', verificarToken, buscarUsuarios)
 
 const { registrarUsuario, loginUsuario } = require('../controllers/usuariosController');
 
