@@ -4,9 +4,15 @@
   const path = require('path');
 
   
-  app.use(cors());
-  app.use(express.json());
-  
+  // app.use(cors());
+  // app.use(express.json());
+  const cors = require('cors');
+app.use(cors({
+  origin: 'https://artesanosalcaraz.netlify.app', // solo Netlify
+  credentials: true
+}));
+
+
   const puerto = 3000;
   
   // Importar rutas
