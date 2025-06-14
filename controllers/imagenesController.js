@@ -33,16 +33,6 @@ const obtenerImagenesUsuario = (req, res) => {
 };
 
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-module.exports = {
-  subirImagen,
-  obtenerImagenesUsuario
-};
-
-=======
-=======
->>>>>>> Stashed changes
 const obtenerImagenesCompartidas = (req, res) => {
   const usuarioId = req.usuario.id;
 
@@ -61,9 +51,3 @@ module.exports = {
   obtenerImagenesUsuario,
   obtenerImagenesCompartidas 
 };
-
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
