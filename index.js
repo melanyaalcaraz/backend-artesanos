@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const express = require('express');
   const cors = require('cors');
   const app = express();
@@ -25,6 +26,8 @@ app.use(cors({
 
   const usuariosRoutes = require('./routes/usuarios');
 =======
+=======
+>>>>>>> Stashed changes
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -44,6 +47,9 @@ const rutasAmistades = require('./routes/amistades');
 app.use('/api/amistad', rutasAmistades);
 
 const usuariosRoutes = require('./routes/usuarios');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 app.use('/api/usuarios', usuariosRoutes);
 
@@ -51,6 +57,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 const imagenesRoutes = require('./routes/imagenes');
 app.use('/api/imagenes', imagenesRoutes);
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   
 
@@ -60,6 +67,8 @@ app.use('/api/imagenes', imagenesRoutes);
   });
  
 =======
+=======
+>>>>>>> Stashed changes
 
 app.use('/api/comentarios', require('./routes/comentarios'));
 
@@ -69,4 +78,7 @@ app.listen(puerto, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${puerto}`);
 });
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

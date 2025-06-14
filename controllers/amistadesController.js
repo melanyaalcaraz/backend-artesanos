@@ -2,6 +2,7 @@
 const amistadesModel = require('../models/amistadesModel');
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // const solicitarAmistad = (req, res) => {
 //   const deUsuarioId = req.usuario.id;
 //   const { para_usuario_id } = req.body;
@@ -19,6 +20,9 @@ const amistadesModel = require('../models/amistadesModel');
 //     res.status(201).json({ mensaje: 'Solicitud enviada', id: resultado.insertId });
 //   });
 // };
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes

@@ -115,6 +115,7 @@ const buscarUsuarios = (req, res) => {
 
 
 
+<<<<<<< Updated upstream
 
 const conexion = require('../base_datos/conexion');
 
@@ -171,6 +172,8 @@ const buscarUsuarios = (req, res) => {
 
 
 
+=======
+>>>>>>> Stashed changes
 
 module.exports = {
   registrarUsuario,

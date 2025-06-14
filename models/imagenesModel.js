@@ -13,10 +13,13 @@ function obtenerPorUsuario(usuarioId, callback) {
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 module.exports = {
   guardarImagen,
   obtenerPorUsuario
 =======
+=======
+>>>>>>> Stashed changes
 const obtenerImagenesDeAmigos = (usuarioId, callback) => {
   const sql = `
     SELECT i.*, u.nombre AS autor
@@ -36,5 +39,8 @@ module.exports = {
   guardarImagen,
   obtenerPorUsuario,
   obtenerImagenesDeAmigos
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 };

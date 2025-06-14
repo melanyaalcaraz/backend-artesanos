@@ -8,8 +8,11 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     // const ext = path.extname(file.originalname);
     // const nombreFinal = Date.now() + '-' + file.originalname;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     const nombreFinal = Date.now() + '-' + file.originalname.replace(/\s+/g, '_').replace(/[()]/g, '');

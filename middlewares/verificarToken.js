@@ -11,7 +11,11 @@ function verificarToken(req, res, next) {
 
   try {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     const decoded = jwt.verify(token, 'CLAVE_SECRETA'); // Reemplazá por tu clave real
+=======
+    const decoded = jwt.verify(token, 'CLAVE_SECRETA'); 
+>>>>>>> Stashed changes
 =======
     const decoded = jwt.verify(token, 'CLAVE_SECRETA'); 
 >>>>>>> Stashed changes
