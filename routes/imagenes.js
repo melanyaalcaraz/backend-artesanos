@@ -9,4 +9,11 @@ router.post('/', verificarToken, upload.single('imagen'), imagenesController.sub
 router.get('/', verificarToken, imagenesController.obtenerImagenesUsuario);
 
 
+<<<<<<< Updated upstream
+=======
+router.get('/compartidas', verificarToken, imagenesController.obtenerImagenesCompartidas);
+
+
+
+>>>>>>> Stashed changes
 module.exports = router;

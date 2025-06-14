@@ -3,7 +3,11 @@ const router = express.Router();
 const { buscarUsuarios } = require('../controllers/usuariosController');
 const verificarToken = require('../middlewares/verificarToken');
 
+<<<<<<< Updated upstream
 // Ruta para buscar usuarios por nombre o email
+=======
+
+>>>>>>> Stashed changes
 router.get('/buscar', verificarToken, buscarUsuarios)
 
 const { registrarUsuario, loginUsuario } = require('../controllers/usuariosController');

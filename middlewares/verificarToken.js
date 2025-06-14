@@ -10,7 +10,11 @@ function verificarToken(req, res, next) {
   const token = authHeader.split(' ')[1];
 
   try {
+<<<<<<< Updated upstream
     const decoded = jwt.verify(token, 'CLAVE_SECRETA'); // Reemplazá por tu clave real
+=======
+    const decoded = jwt.verify(token, 'CLAVE_SECRETA'); 
+>>>>>>> Stashed changes
     req.usuario = decoded;
     next();
   } catch (err) {

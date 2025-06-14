@@ -1,10 +1,19 @@
 const bcrypt = require('bcrypt');
 const usuariosModel = require('../models/usuariosModel');
+const jwt = require('jsonwebtoken');
 
 const registrarUsuario = async (req, res) => {
   const { nombre, email, password, imagen_perfil } = req.body;
 
   if (!nombre || !email || !password) {
+      // ✅ Validación de contraseña
+      const regex = /^(?=.*[a-zA-Z])(?=.*\d).{6,}$/;
+    if (!regex.test(password)) {
+      return res.status(400).json({
+      error: 'La contraseña debe tener al menos 6 caracteres, una letra y un número.'
+    });
+}
+
     return res.status(400).json({ error: 'Faltan datos obligatorios' });
   }
 
@@ -37,7 +46,7 @@ const registrarUsuario = async (req, res) => {
 
 };
 
-const jwt = require('jsonwebtoken');
+
 
 const loginUsuario = async (req, res) => {
   const { email, password } = req.body;
@@ -71,6 +80,40 @@ const loginUsuario = async (req, res) => {
     res.json({ token, usuario: { id: usuario.id, nombre: usuario.nombre, email: usuario.email } });
   });
 };
+
+//CAMBIAR
+const conexion = require('../base_datos/conexion');
+
+
+
+const buscarUsuarios = (req, res) => {
+  const { q } = req.query;
+  const usuarioId = req.usuario.id;
+
+  const sql = `
+    SELECT u.id, u.nombre, u.email,
+      (SELECT estado FROM amistades
+       WHERE (de_usuario_id = ? AND para_usuario_id = u.id)
+          OR (de_usuario_id = u.id AND para_usuario_id = ?)
+       LIMIT 1) AS estado_amistad
+    FROM usuarios u
+    WHERE (u.nombre LIKE ? OR u.email LIKE ?)
+      AND u.id != ?
+  `;
+
+  const valor = `%${q}%`;
+
+  conexion.query(sql, [usuarioId, usuarioId, valor, valor, usuarioId], (err, resultados) => {
+    if (err) {
+      console.error('❌ Error al buscar usuarios:', err);
+      return res.status(500).json({ error: 'Error al buscar usuarios' });
+    }
+
+    res.json(resultados);
+  });
+};
+
+
 
 
 const conexion = require('../base_datos/conexion');

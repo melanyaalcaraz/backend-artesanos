@@ -33,8 +33,31 @@ const obtenerImagenesUsuario = (req, res) => {
 };
 
 
+<<<<<<< Updated upstream
 module.exports = {
   subirImagen,
   obtenerImagenesUsuario
 };
 
+=======
+const obtenerImagenesCompartidas = (req, res) => {
+  const usuarioId = req.usuario.id;
+
+  imagenesModel.obtenerImagenesDeAmigos(usuarioId, (err, imagenes) => {
+    if (err) {
+      console.error('❌ Error al obtener imágenes compartidas:', err);
+      return res.status(500).json({ error: 'Error al obtener imágenes de tus contactos' });
+    }
+
+    res.json(imagenes);
+  });
+};
+
+module.exports = {
+  subirImagen,
+  obtenerImagenesUsuario,
+  obtenerImagenesCompartidas 
+};
+
+
+>>>>>>> Stashed changes
