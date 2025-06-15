@@ -23,10 +23,28 @@ function obtenerTodos(callback) {
   db.query(sql, callback);
 }
 
+function buscarUsuarios(q, usuarioId, callback) {
+  const sql = `
+    SELECT u.id, u.nombre, u.email,
+      (SELECT estado FROM amistades
+       WHERE (de_usuario_id = ? AND para_usuario_id = u.id)
+          OR (de_usuario_id = u.id AND para_usuario_id = ?)
+       LIMIT 1) AS estado_amistad
+    FROM usuarios u
+    WHERE (u.nombre LIKE ? OR u.email LIKE ?)
+      AND u.id != ?
+  `;
+
+  const valor = `%${q}%`;
+
+  db.query(sql, [usuarioId, usuarioId, valor, valor, usuarioId], callback);
+}
+
 module.exports = {
   crearUsuario,
   obtenerPorEmail,
-  obtenerTodos
+  obtenerTodos,
+  buscarUsuarios
 };
 
 
