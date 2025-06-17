@@ -35,6 +35,7 @@ Esta aplicación es una red social pensada para que artesanos y artistas puedan:
 ### Deploy
 - 🚀 Backend: [Render](https://backend-artesanos.onrender.com)
 - 🎨 Frontend: [Netlify](https://artesanosalcaraz.netlify.app)
+- 🗃️ Base de datos: Este proyecto utiliza MySQL como base de datos, alojada en [AlwaysData](https://alwaysdata.com/), gestionada mediante phpMyAdmin desde una cuenta privada del equipo de desarrollo.
 
 ---
 
