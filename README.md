@@ -56,7 +56,7 @@ Esta aplicación es una red social pensada para que artesanos y artistas puedan:
 
 ## 🎥 Video demo
 
-Link: [https://drive.google.com/file/d/1HQQMJe2XCXtBP8Z-AXbQAg5XQrwJyld2/view?usp=drive_link]
+Link: [https://drive.google.com/file/d/10XjxmVzgGUZdlTcbWau1YYGccOYvmoOD/view?usp=sharing]
 ---
 
 ## 👩‍💻 Autora
